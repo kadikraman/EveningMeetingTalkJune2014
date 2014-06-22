@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tessella Evening Meeting Talk: Data Visualisation in D3</title>
+
+	<link rel="stylesheet" href="css/shCoreEclipse.css">
 	<link rel="stylesheet" href="css/reveal.min.css">
 	<link rel="stylesheet" href="css/theme/serif-customised.css" id="theme">	
 	<!--Add support for earlier versions of Internet Explorer -->
@@ -31,6 +33,41 @@
 				</div>
 			</section>
 
+			<section>
+				<pre class="brush: js;">
+					[---]
+						{ type: "maintenance", cost: 14.00, date: "09/03/14", comment: "wheel trims" },
+						{ type: "maintenance", cost: 4.99, date: "09/03/14", comment: "smelly car tree" },
+						{ type: "petrol", cost: 43.20, date: "11/03/14", mileage: 48934 },
+						{ type: "parking", cost: 1.50, date: "15/03/14"},
+						{ type: "petrol", cost: 39.18, date: "20/03/14", mileage: 49230 },
+						{ type: "petrol", cost: 38.78, date: "28/03/14", mileage: 49514, liters: 30.78 },
+						{ type: "petrol", cost: 38.06, date: "01/04/14", mileage: 49827, liters: 30.23 },
+						{ type: "petrol", cost: 40.55, date: "09/04/14", mileage: 50125, liters: 32.73 },
+						{ type: "parking", cost: 2.70, date: "09/04/14"},
+						{ type: "parking", cost: 3.50, date: "11/04/14"},
+						{ type: "parking", cost: 7.00, date: "19/04/14"},
+						{ type: "fine", cost: 65.00, date: "26/04/14", comment: "Camden parking fine" },
+						{ type: "maintenance", cost: 4.99, date: "03/05/14", comment: "car wash" },
+						{ type: "parking", cost: 1.50, date: "03/05/14"},
+						{ type: "parking", cost: 3.50, date: "03/05/14"},
+						{ type: "petrol", cost: 49.02, date: "03/05/14", mileage: 51142 },
+						{ type: "parking", cost: 1.60, date: "04/05/14"},
+						{ type: "petrol", cost: 42.61, date: "15/05/14", mileage: 51506 },
+						{ type: "parking", cost: 0.90, date: "17/05/14"},
+						{ type: "parking", cost: 1.50, date: "17/05/14"},
+						{ type: "petrol", cost: 42.33, date: "22/05/14", mileage: 51872 },
+						{ type: "parking", cost: 4.00, date: "24/05/14" },
+						{ type: "parking", cost: 3.50, date: "30/05/14" },
+						{ type: "parking", cost: 4.00, date: "31/05/14" },
+						{ type: "petrol", cost: 41.91, date: "04/06/14", mileage: 52201 },
+						{ type: "parking", cost: 3.50, date: "13/06/14" },
+						{ type: "petrol", cost: 39.15, date: "15/06/14", mileage: 52525 },
+						{ type: "parking", cost: 3.50, date: "20/06/14" }
+					[---]
+				</pre>
+			</section>
+
 			<section id="show-a-link">
 				<h1>Show a live link</h1>
 				<p>Slide 2 discussed here</p>
@@ -51,6 +88,9 @@
 	<script src="js/underscore-min.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/crunch.js"></script>
+	<script src="js/shCore.js"></script>
+	<script src="js/shBrushJScript.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
 	<script src="js/graphs/bar.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
