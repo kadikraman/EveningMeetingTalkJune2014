@@ -22,31 +22,33 @@
 			<!-- ALL SLIDES GO HERE -->
 			<!-- Each section element contains an individual slide -->
 			<section>
-				<h1>Data Visualisation and D3</h1>
-				<p>What is it? How to use it? Why choose it?</p>		
+				<h2>Data Visualisation and D3</h2>
+				<h4>What is it? How to use it? Why choose it?</h4>		
 			</section>
 
 			<section>
+				<h2>Steer HQ</h2>
 				<img src="images/SteerHQ.jpg" alt="Steer HQ!">
 			</section>
 
 			<section>
-				<h1>When is it useful to visualize data?</h1>
+				<h2>When is it useful to visualize data?</h2>
 			</section>
 
 			<section>
-				<h1><a href="http://bl.ocks.org/mbostock/4063318">Spotting patterns</a></h1>
+				<h2><a href="http://bl.ocks.org/mbostock/4063318">Spotting patterns</a></h2>
 			</section>
 
 			<section>
-				<h1><a href="http://seekshreyas.com/beerviz/">Spotting dependencies</a></h1>
+				<h2><a href="http://seekshreyas.com/beerviz/">Spotting dependencies</a></h2>
 			</section>
 
 			<section>
-				<h1><a href="https://github.com/jasondavies/d3-cloud">Spotting trends</a></h1>
+				<h2><a href="https://github.com/jasondavies/d3-cloud">Spotting trends</a></h2>
 			</section>
 
 			<section>
+				<h2>Kadi's Car</h2>
 				<img src="images/KadiCar.jpg" alt="KadiCar!">
 			</section>
 
@@ -86,23 +88,83 @@
 			</section>
 
 			<section>
+				<h5>A perfectly decent bar chard made in MS Word</h5>
 				<img src="images/carDataWord.png" alt="Car data in Word">
 			</section>
 
 			<section id="slideBasicBar">
 				<div class="centercontainer">
-					<p>Total monthly spent on car since purchace (excluding purchace and insurance) </p>
+					<h5>Total monthly spent on car since purchace (excluding purchace and insurance) </h5>
 					<svg id="svgBasicBar"></svg>
 				</div>
 			</section>
 
 			<section id="slidePie">
-				<center><div id="label"></div></center>
+				<h5>Breakdown of monthly spend by type</h5>
+				<center><div id="kadi-car-on-hover-label"></div></center>
 				<svg id="svgPie"></svg>
+			</section>
+
+			<section>
+				<h5>How to draw a bar chart in D3</h5>
+				<pre class="brush: js;">
+					// using d3 to svg element on out page select the
+					var svg = d3.select("#svgBasicBar")
+    					.attr("width", 750)
+    					.attr("height", 250);
+
+					svg.selectAll("rect") // creates an empty set of rectangles in the memory (since we have none in svg)
+					  .data(monthlyCarExpenses) //pass in "jobs" object
+					  .enter() // enters data into the DOM
+					  .append("rect") // sticks them inside the svg (at this point we have 5 empty rectangles
+					  .attr("x", 40) // each rectangle will start 20px from the edge of the page
+					  .attr("y", function(d, i) { return i*30 + 20; }) // d: data && i: index
+					  .attr("width", 0)
+					  .attr("height", 20)
+					  .style("opacity", 0.7)
+					  .on("mouseover", function(d,i) 
+					    {d3.select(this).transition().duration(200).style("fill", "green"); })
+					  .on("mouseout", function(d,i)
+					    {d3.select(this).transition().duration(200).style("fill", "black"); })
+					  .transition() // everything after this will start a transition
+					    .delay(function(d, i) {return i*250; })
+					    .duration(1000)
+					    .attr("width", function (d, i) { return widthScale(d.cost); });
+				</pre>
+			</section>
+
+			<section>
+				<h2><a href="twitter_search/index.html">Using public APIs</a></h2>
+				<h3><a href="twitter_search/index.html">Twitter example</a></h3>
+			</section>
+
+
+			<section>
+				<h5>How to use public APIs</h5>
+				<pre class="brush: js;">
+					// query string
+					var query = "Estonia";
+
+					// url (public API for accessing the data)
+					var url = "http://twitcher.steer.me/search?q=" + query + "&key=px2xvp2q";
+
+					// execute the query
+					d3.json(url, function(error, data) {
+						// do something with data received
+					}
+				</pre>
+			</section>
+
+			<section>
+				<img src="images/twitterJSON.png" alt="twitterJSON!">
 			</section>
 
 			<section id="slideStevenageStaff">
 				<svg id="svgStevenageStaff"></svg>
+			</section>
+
+			<section>
+				<h1>Questions?</h1>
 			</section>
 
 			</div>

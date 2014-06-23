@@ -141,10 +141,14 @@ body {
 * CUSTOM
  *********************************************/
 .centercontainer{
-  margin: 20% 10% !important;
+  margin: 10% 10% !important;
 }
 
 text {
   color: #000000 !important;
   fill: #616354 !important;
+}
+
+#kadi-car-on-hover-label {
+  color: #616354;
 }

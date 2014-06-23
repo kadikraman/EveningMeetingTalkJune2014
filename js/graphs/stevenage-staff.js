@@ -32,7 +32,7 @@ function launchStaffBubbles(){
 	var circles = svg.selectAll("circle");
 	var texts = svg.selectAll("text");
 
-	var colorScale = d3.scale.linear().domain([1, 30]).range(["#FFFF99", "#003300"]).clamp(true);
+	var colorScale = d3.scale.linear().domain([1, 30]).range(["#F1C40F", "#C0392B"]).clamp(true);
 
 	var fontScale = d3.scale.sqrt().domain([1, 30]).range([12, 40]);
 

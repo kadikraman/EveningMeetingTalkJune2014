@@ -36,13 +36,13 @@ g.selectAll('path').data(function(d,i){return pieLayout(getDetailedMonthlyExpens
 		d3.select(this.parentNode)
 			.select("text")
 			.text("£" + d.value.toFixed(2))
-		d3.select("#label").text(types[i])
+		d3.select("#kadi-car-on-hover-label").text(types[i])
 	})
 	.on("mouseout", function(d, i){
 		d3.select(this.parentNode)
 			.select("text")
 			.text(function(d,i) { return d.month })
-		d3.select("#label").text(" . ")
+		d3.select("#kadi-car-on-hover-label").html("&nbsp;")
 	})
 
 g.append("text").text(function(d,i) { return monthlyData[i].month })
@@ -52,5 +52,5 @@ g.append("text").text(function(d,i) { return monthlyData[i].month })
 //g.append("text").text(function(d,i) { return monthlyData[i].month })
 //				.attr("transform", "translate(-20, 20)");
 
-d3.select("#label").append("text")
-.text(" . ")
+d3.select("#kadi-car-on-hover-label").append("text")
+.html("&nbsp;")
