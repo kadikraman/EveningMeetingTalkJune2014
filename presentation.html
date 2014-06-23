@@ -36,15 +36,28 @@
 			</section>
 
 			<section>
-				<h2><a href="http://bl.ocks.org/mbostock/4063318">Spotting patterns</a></h2>
+				<h3><a href="http://bl.ocks.org/mbostock/4063318">Spotting patterns</a></h3>
+
+				<h3><a href="http://seekshreyas.com/beerviz/">Spotting dependencies</a></h3>
+
+				<h3><a href="http://www.theguardian.com/world/interactive/2013/apr/30/violence-guns-best-selling-video-games">When you have a lot of data</a></h3>
+
+				<h3><a href="https://github.com/jasondavies/d3-cloud">Spotting trends</a></h3>
 			</section>
 
 			<section>
-				<h2><a href="http://seekshreyas.com/beerviz/">Spotting dependencies</a></h2>
+				<h2>Dasngers of data visualisation</h2>
 			</section>
 
 			<section>
-				<h2><a href="https://github.com/jasondavies/d3-cloud">Spotting trends</a></h2>
+				<h2>Psychedelic Pie Chart</h2>
+				<h5>( from http://wtfviz.net/ )</h5>
+				<img src="images/wtfviz1.png" alt="Psychedelic Pie Chart">
+			</section>
+
+			<section>
+				<h4>Sometimes a bar chart just isn't enough</h4>
+				<img src="images/wtfviz2.jpg" alt="Too much data">
 			</section>
 
 			<section>
@@ -88,7 +101,7 @@
 			</section>
 
 			<section>
-				<h5>A perfectly decent bar chard made in MS Word</h5>
+				<h5>A perfectly decent bar chart made in MS Word</h5>
 				<img src="images/carDataWord.png" alt="Car data in Word">
 			</section>
 
@@ -101,8 +114,8 @@
 
 			<section id="slidePie">
 				<h5>Breakdown of monthly spend by type</h5>
-				<center><div id="kadi-car-on-hover-label"></div></center>
 				<svg id="svgPie"></svg>
+				<center><div id="kadi-car-on-hover-label"></div></center>
 			</section>
 
 			<section>
@@ -113,11 +126,11 @@
     					.attr("width", 750)
     					.attr("height", 250);
 
-					svg.selectAll("rect") // creates an empty set of rectangles in the memory (since we have none in svg)
-					  .data(monthlyCarExpenses) //pass in "jobs" object
+					svg.selectAll("rect") // creates an empty set of rectangles
+					  .data(monthlyCarExpenses) //pass in data object
 					  .enter() // enters data into the DOM
-					  .append("rect") // sticks them inside the svg (at this point we have 5 empty rectangles
-					  .attr("x", 40) // each rectangle will start 20px from the edge of the page
+					  .append("rect") // sticks them inside the svg
+					  .attr("x", 40) // each rectangle will start 40px from the edge of the page
 					  .attr("y", function(d, i) { return i*30 + 20; }) // d: data && i: index
 					  .attr("width", 0)
 					  .attr("height", 20)
@@ -134,7 +147,7 @@
 			</section>
 
 			<section>
-				<h2><a href="twitter_search/index.html">Using public APIs</a></h2>
+				<h2>Using public APIs</h2>
 				<h3><a href="twitter_search/index.html">Twitter example</a></h3>
 			</section>
 
