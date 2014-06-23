@@ -141,5 +141,10 @@ body {
 * CUSTOM
  *********************************************/
 .centercontainer{
-  margin: 20% !important;
+  margin: 20% 10% !important;
+}
+
+text {
+  color: #000000 !important;
+  fill: #616354 !important;
 }
