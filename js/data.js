@@ -83,3 +83,151 @@ var expenseColors = [
 	{ type: "tax", color: "#4EB4FF" },
 	{ type: "fine", color: "#FFFF75" }
 ];
+
+var stevenageStaff = [
+// 1 year
+	{ name: "Morgan Hollis", shortName: "HOLM", years: 1 },
+	{ name: "Kadi Kraman", shortName: "KRAK", years: 1 },
+	{ name: "Jonathan Masson", shortName: "MASJ", years: 1 },
+	{ name: "Angela Montenegro", shortName: "MONA", years: 1 },
+	{ name: "Simon Peers", shortName: "PEESI", years: 1 },
+	{ name: "Matt Jones", shortName: "JONM", years: 1 },
+// 2 years
+	{ name: "Jonathan Agg", shortName: "AGGJ", years: 2 },
+	{ name: "David Allen", shortName: "ALLD", years: 2 },
+	{ name: "James Hutchinson", shortName: "HUTJ", years: 2 },
+	{ name: "Elias Malik", shortName: "MALE", years: 2 },
+	{ name: "Jonathan McKenzie", shortName: "MCKJ", years: 2 },
+	{ name: "Daniel Wallis", shortName: "WALD", years: 2 },
+
+// 3-4 years
+	{ name: "Jonny Arnold", shortName: "ARNJ", years: 3.5 },
+	{ name: "Marcel Cutts", shortName: "CUTM", years: 3.5 },
+	{ name: "Michael Dinsdale", shortName: "DINM", years: 3.5 },
+	{ name: "Anniek van der Drift", shortName: "DRIA", years: 3.5 },
+	{ name: "Mark Knight", shortName: "KNIM", years: 3.5 },
+	{ name: "Benoit Mangili", shortName: "MANB", years: 3.5 },
+	{ name: "Michael Mases", shortName: "MASM", years: 3.5 },
+	{ name: "Andrew Pollard", shortName: "POLA", years: 3.5 },
+
+// 5-7 years
+	{ name: "Alistar Rae", shortName: "RAEA", years: 6 },
+	{ name: "Iain Peddie", shortName: "PEDI", years: 6 },
+	{ name: "Mathew Burnett", shortName: "BURM", years: 6 },
+	{ name: "Paul Cooper", shortName: "COOP", years: 6 },
+	{ name: "Simon Child", shortName: "CHIS", years: 6 },
+
+// 8-10 years
+	{ name: "Alan Gaby", shortName: "GABA", years: 9 },
+	{ name: "David Whittle", shortName: "WHID", years: 9 },
+	{ name: "Fran Moore", shortName: "MOOF", years: 9 },
+	{ name: "James Myatt", shortName: "MYAJ", years: 9 },
+	{ name: "Mark Roberts", shortName: "ROBM", years: 9 },
+	{ name: "Michael Spence", shortName: "SPEM", years: 9 },
+
+// 11-17 years
+	{ name: "Bruce Fairley", shortName: "FAIB", years: 14 },
+	{ name: "Colin Maule", shortName: "MAUC", years: 14 },
+	{ name: "David Brear", shortName: "BREC", years: 14 },
+	{ name: "Graham Berridge", shortName: "BERG", years: 14 },
+	{ name: "Matthey Pigg", shortName: "PIGM", years: 14 },
+	{ name: "Stephen Baker", shortName: "BAKS", years: 14 },
+	{ name: "Stuart White", shortName: "WHIS", years: 14 },
+	{ name: "Timothy Pattenden", shortName: "PATT", years: 14 },
+	{ name: "Werner Schultz", shortName: "SCHW", years: 14 },
+
+// 18 years
+	{ name: "David Dungate", shortName: "DUND", years: 18 },
+
+// 30 years
+	{ name: "Lawrence Hopkins", shortName: "HOPL", years: 30 },
+
+// people I forgot, but must append to not mess up related links (sorry Tristan)
+	{ name: "Tristan West", shortName: "WEST", years: 1 }
+];
+
+var related = [
+	{source: 0, target: 22}, // Morgan Mat
+	{source: 1, target: 22}, // Kadi Mat 
+	{source: 2, target: 33}, // Masson Brear
+	{source: 3, target: 24}, // Angela Simon Child
+	{source: 4, target: 31}, // Simon Peers Bruce
+	{source: 5, target: 31}, // Mathew Jones Bruce
+	{source: 6, target: 28}, // Agg Myatt
+	{source: 7, target: 30}, // DAllen Spence
+	{source: 8, target: 34}, // HUTJ Graham
+	{source: 9, target: 32}, // Elias Colin
+	{source: 10, target: 35}, // McK Pigg
+	{source: 11, target: 34}, // Daniel Wallis Graham
+	{source: 12, target: 4}, // ARNJ Simon Peers
+	{source: 13, target: 34}, // Marcel Graham
+	{source: 14, target: 33}, // Dinsdale David Brear
+	{source: 15, target: 36}, // Anniek Steve
+
+	{source: 17, target: 37}, // Benoit Stuart
+	{source: 18, target: 30}, // Mases Spence
+	{source: 19, target: 28}, // Andrew Myatt
+	{source: 20, target: 37}, // alistar Stuart
+	{source: 21, target: 37}, // iain Stuart
+	{source: 22, target: 36}, // Burnet Steve
+	{source: 23, target: 37}, // Paul Cooper Stuart
+	{source: 24, target: 4}, // Simon Child Simon Peers
+
+	{source: 28, target: 32}, // Myatt Colin
+
+	{source: 30, target: 4}, // spence simon peers
+
+	{source: 33, target: 36}, // david Brear Steve
+	{source: 34, target: 36}, // graham Brear Steve
+	{source: 35, target: 33}, // Pigg Colin
+	{source: 36, target: 31}, // Steve Bruce
+	{source: 37, target: 31}, // Stuart Bruce
+	{source: 39, target: 31}, // Werner Bruce
+	
+	{source: 42, target: 24} // Tristan Simon Child
+
+// 0 Morgan Hollis
+// 1 Kadi Kraman
+// 2 Jonathan Masson
+// 3 Angela Montenegro
+// 4 Simon Peers
+// 5 Matt Jones
+// 6 Jonathan Agg
+// 7 David Allen
+//8 James Hutchinson
+//9 Elias Malik
+//10 Jonathan McKenzie
+//11 Daniel Wallis
+//12 Jonny Arnold
+//13 Marcel Cutts
+//14 Michael Dinsdale
+//15 Anniek van der Drift
+//16 Mark Knight
+//17 Benoit Mangili
+//18 Michael Mases
+//19 Andrew Pollard
+//20 Alistar Rae
+//21 Iain Peddie
+//22 Mathew Burnett
+//23 Paul Cooper
+//24 Simon Child
+//25 Alan Gaby
+//26 David Whittle
+//27 Fran Moore
+//28 James Myatt
+//29 Mark Roberts
+//30 Michael Spence
+//31 Bruce Fairley
+//32 Colin Maule
+//33 David Brear
+//34 Graham Berridge
+//35 Matthey Pigg
+//36 Stephen Baker
+//37 Stuart White
+//38 Timothy Pattenden
+//39 Werner Schultz
+//40 David Dungate
+//41 Lawrence Hopkins
+//42 Tristan West
+
+];
