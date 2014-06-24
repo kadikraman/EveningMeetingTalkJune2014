@@ -128,7 +128,7 @@ var stevenageStaff = [
 // 11-17 years
 	{ name: "Bruce Fairley", shortName: "FAIB", years: 14 },
 	{ name: "Colin Maule", shortName: "MAUC", years: 14 },
-	{ name: "David Brear", shortName: "BREC", years: 14 },
+	{ name: "David Brear", shortName: "BRED", years: 14 },
 	{ name: "Graham Berridge", shortName: "BERG", years: 14 },
 	{ name: "Matthey Pigg", shortName: "PIGM", years: 14 },
 	{ name: "Stephen Baker", shortName: "BAKS", years: 14 },
@@ -142,8 +142,9 @@ var stevenageStaff = [
 // 30 years
 	{ name: "Lawrence Hopkins", shortName: "HOPL", years: 30 },
 
-// people I forgot, but must append to not mess up related links (sorry Tristan)
-	{ name: "Tristan West", shortName: "WEST", years: 1 }
+// people I forgot, but must append to not mess up related links (sorry Tristan and Dave)
+	{ name: "Tristan West", shortName: "WEST", years: 1 },
+	{ name: "David Brett", shortName: "BREDR", years: 1 }
 ];
 
 var related = [
@@ -156,7 +157,7 @@ var related = [
 	{source: 6, target: 28}, // Agg Myatt
 	{source: 7, target: 30}, // DAllen Spence
 	{source: 8, target: 34}, // HUTJ Graham
-	{source: 9, target: 32}, // Elias Colin
+	{source: 9, target: 35}, // Elias Matt
 	{source: 10, target: 35}, // McK Pigg
 	{source: 11, target: 34}, // Daniel Wallis Graham
 	{source: 12, target: 4}, // ARNJ Simon Peers
@@ -173,18 +174,23 @@ var related = [
 	{source: 23, target: 37}, // Paul Cooper Stuart
 	{source: 24, target: 4}, // Simon Child Simon Peers
 
+	{source: 26, target: 25}, // WHID GABA
+	
 	{source: 28, target: 32}, // Myatt Colin
-
+	{source: 29, target: 38}, // MarkR TimP
 	{source: 30, target: 4}, // spence simon peers
 
 	{source: 33, target: 36}, // david Brear Steve
 	{source: 34, target: 36}, // graham Brear Steve
-	{source: 35, target: 33}, // Pigg Colin
+	{source: 35, target: 32}, // Pigg Colin
 	{source: 36, target: 31}, // Steve Bruce
 	{source: 37, target: 31}, // Stuart Bruce
-	{source: 39, target: 31}, // Werner Bruce
 	
-	{source: 42, target: 24} // Tristan Simon Child
+	{source: 39, target: 31}, // Werner Bruce
+	{source: 40, target: 26}, // DaveD WHID
+	{source: 41, target: 25}, // HOPL GABA
+	{source: 42, target: 24}, // Tristan Simon Child
+	{source: 43, target: 12} // David Brett Jonny
 
 // 0 Morgan Hollis
 // 1 Kadi Kraman
@@ -229,5 +235,6 @@ var related = [
 //40 David Dungate
 //41 Lawrence Hopkins
 //42 Tristan West
+//43 David Brett
 
 ];
