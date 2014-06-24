@@ -98,7 +98,7 @@ var stevenageStaff = [
 	{ name: "James Hutchinson", shortName: "HUTJ", years: 2 },
 	{ name: "Elias Malik", shortName: "MALE", years: 2 },
 	{ name: "Jonathan McKenzie", shortName: "MCKJ", years: 2 },
-	{ name: "Daniel Wallis", shortName: "WALD", years: 2 },
+	{ name: "Daniel Wallis", shortName: "WALDM", years: 2 },
 
 // 3-4 years
 	{ name: "Jonny Arnold", shortName: "ARNJ", years: 3.5 },
